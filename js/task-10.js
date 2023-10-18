@@ -31,4 +31,5 @@ function createBoxes() {
 
 function destroyBoxes() {
   refs.boxesDiv.innerHTML = "";
+  refs.input.value = "";
 }
