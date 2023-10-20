@@ -5,7 +5,11 @@ const refs = {
   boxesDiv: document.getElementById("boxes"),
 };
 
-refs.createBtn.addEventListener('click', createBoxes);
+refs.createBtn.addEventListener('click', () => {
+  const amount = Number(refs.input.value);
+  createBoxes(amount);
+});
+
 refs.destroyBtn.addEventListener('click', destroyBoxes);
 
 function getRandomHexColor() {
@@ -14,9 +18,8 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 };
 
-function createBoxes() {
+function createBoxes(amount) {
     const basicSize = 30;
-    let amount = refs.input.value;
 
     for (let i = 0; i < amount; i += 1) {
     const size = basicSize + i * 10;

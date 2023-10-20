@@ -9,6 +9,7 @@ function handlerSubmitForm(e) {
 
     if (email.value === "" || password.value === "") {
         alert('Attention! All the fields must be filled');
+        return;
     }
     
     const data = {
